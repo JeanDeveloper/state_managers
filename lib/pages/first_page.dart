@@ -1,5 +1,4 @@
 import 'package:estate/models/user.dart';
-import 'package:estate/services/user_service.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,14 +14,16 @@ class FirstPage extends StatelessWidget {
         title: const Text("First Page"),
       ),
 
-      body: StreamBuilder(
-        stream: userService.userStream,
-        builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
-          return snapshot.hasData  
-            ? UserInformation(userService.user!) 
-            : const Center(child: Text('No hay informacion del usuario'));
-        },
-      ),
+      // body: StreamBuilder(
+      //   stream: userService.userStream,
+      //   builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
+      //     return snapshot.hasData  
+      //       ? UserInformation(userService.user!) 
+      //       : const Center(child: Text('No hay informacion del usuario'));
+      //   },
+      // ),
+
+      body:  UserInformation( User( name: "Jean Carlo Chunga", age: 25, profesiones: ["Ingeniero, Doctor, Abogado"] ) ),
 
       floatingActionButton: FloatingActionButton(
         child: const Icon( Icons.accessibility_new ),
@@ -56,7 +57,7 @@ class UserInformation extends StatelessWidget {
 
             const Text('General', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const Divider(),
-            
+
             ListTile( title: Text("Nombre:  ${user.name}") ),
             ListTile( title: Text("Edad: ${user.age}") ),
 

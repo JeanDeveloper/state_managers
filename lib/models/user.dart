@@ -4,7 +4,7 @@ class User{
   int? age; 
   List<String>? profesiones;
 
-  User({ 
+  User({
     this.name, 
     this.age, 
     this.profesiones 
