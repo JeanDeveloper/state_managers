@@ -14,14 +14,6 @@ class FirstPage extends StatelessWidget {
         title: const Text("First Page"),
       ),
 
-      // body: StreamBuilder(
-      //   stream: userService.userStream,
-      //   builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
-      //     return snapshot.hasData  
-      //       ? UserInformation(userService.user!) 
-      //       : const Center(child: Text('No hay informacion del usuario'));
-      //   },
-      // ),
 
       body:  UserInformation( User( name: "Jean Carlo Chunga", age: 25, profesiones: ["Ingeniero, Doctor, Abogado"] ) ),
 

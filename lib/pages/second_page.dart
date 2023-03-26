@@ -19,9 +19,6 @@ class SecondPage extends StatelessWidget {
               color: Colors.blue,
               child: const Text('Establecer usuario', style: TextStyle( color: Colors.white )),
               onPressed: (){}
-                // final user = User( name: "Jean Carlo", age: 25, profesiones: ["Ing. de Sistemas e Informatica", "Derecho"] );
-                // userService.loadUser(user);
-              // }
             ),
 
             MaterialButton(
